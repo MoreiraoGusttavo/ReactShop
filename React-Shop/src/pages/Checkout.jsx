@@ -25,8 +25,7 @@ export const Checkout = () => {
     cardCVC: '',
   })
 
-  const [paymentMethod, setPaymentMethod] = useState('credit')
-  const [installments, setInstallments] = useState('1')
+  const [paymentMethod, setPaymentMethod] = useState('card')
   const [orderPlaced, setOrderPlaced] = useState(false)
   const [timeLeft, setTimeLeft] = useState(600) // 10 minutes in seconds
 
@@ -64,7 +63,7 @@ export const Checkout = () => {
     e.preventDefault()
 
     // Validação básica
-    const isCard = paymentMethod === 'credit' || paymentMethod === 'debit'
+    const isCard = paymentMethod === 'card'
     const basicFields = formData.fullName && formData.email && formData.phone && 
                         formData.address && formData.city && formData.state
 
@@ -109,7 +108,7 @@ export const Checkout = () => {
         )}
 
         <form onSubmit={handleSubmit} className="checkout-form">
-          {/* Seção de Endereço ... (unchanged) */}
+          {/* Seção de Endereço */}
           <section className="form-section">
             <h2>📍 Endereço de Entrega</h2>
 
@@ -239,26 +238,15 @@ export const Checkout = () => {
             <h2>💳 Método de Pagamento</h2>
             
             <div className="payment-method-selector">
-              <label className={`method-option ${paymentMethod === 'credit' ? 'selected' : ''}`}>
+              <label className={`method-option ${paymentMethod === 'card' ? 'selected' : ''}`}>
                 <input
                   type="radio"
                   name="paymentMethod"
-                  value="credit"
-                  checked={paymentMethod === 'credit'}
+                  value="card"
+                  checked={paymentMethod === 'card'}
                   onChange={(e) => setPaymentMethod(e.target.value)}
                 />
-                <span>Cartão de Crédito</span>
-              </label>
-
-              <label className={`method-option ${paymentMethod === 'debit' ? 'selected' : ''}`}>
-                <input
-                  type="radio"
-                  name="paymentMethod"
-                  value="debit"
-                  checked={paymentMethod === 'debit'}
-                  onChange={(e) => setPaymentMethod(e.target.value)}
-                />
-                <span>Cartão de Débito</span>
+                <span>Cartão de Débito/Crédito</span>
               </label>
 
               <label className={`method-option ${paymentMethod === 'pix' ? 'selected' : ''}`}>
@@ -273,7 +261,7 @@ export const Checkout = () => {
               </label>
             </div>
 
-            {(paymentMethod === 'credit' || paymentMethod === 'debit') ? (
+            {paymentMethod === 'card' ? (
               <div className="card-info fade-in">
                 <div className="form-group">
                   <label htmlFor="cardName">Nome no Cartão *</label>
@@ -284,7 +272,7 @@ export const Checkout = () => {
                     placeholder="Seu nome como está no cartão"
                     value={formData.cardName}
                     onChange={handleInputChange}
-                    required={paymentMethod === 'credit' || paymentMethod === 'debit'}
+                    required={paymentMethod === 'card'}
                   />
                 </div>
 
@@ -298,7 +286,7 @@ export const Checkout = () => {
                     value={formData.cardNumber}
                     onChange={handleInputChange}
                     maxLength="19"
-                    required={paymentMethod === 'credit' || paymentMethod === 'debit'}
+                    required={paymentMethod === 'card'}
                   />
                 </div>
 
@@ -313,7 +301,7 @@ export const Checkout = () => {
                       value={formData.cardExpiry}
                       onChange={handleInputChange}
                       maxLength="5"
-                      required={paymentMethod === 'credit' || paymentMethod === 'debit'}
+                      required={paymentMethod === 'card'}
                     />
                   </div>
 
@@ -327,32 +315,10 @@ export const Checkout = () => {
                       value={formData.cardCVC}
                       onChange={handleInputChange}
                       maxLength="3"
-                      required={paymentMethod === 'credit' || paymentMethod === 'debit'}
+                      required={paymentMethod === 'card'}
                     />
                   </div>
                 </div>
-
-                {paymentMethod === 'credit' && (
-                  <div className="form-group fade-in">
-                    <label htmlFor="installments">Parcelas</label>
-                    <select
-                      id="installments"
-                      value={installments}
-                      onChange={(e) => setInstallments(e.target.value)}
-                      className="installments-select"
-                    >
-                      {[...Array(12)].map((_, i) => {
-                        const count = i + 1
-                        const monthly = (total / count).toFixed(2)
-                        return (
-                          <option key={count} value={count}>
-                            {count}x de R$ {monthly} {count === 1 ? '(Sem juros)' : ''}
-                          </option>
-                        )
-                      })}
-                    </select>
-                  </div>
-                )}
               </div>
             ) : (
               <div className="pix-info fade-in">

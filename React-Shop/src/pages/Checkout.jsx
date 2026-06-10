@@ -23,6 +23,7 @@ export const Checkout = () => {
     cardNumber: '',
     cardExpiry: '',
     cardCVC: '',
+    installments: '1',
   })
 
   const [paymentMethod, setPaymentMethod] = useState('card')
@@ -318,6 +319,28 @@ export const Checkout = () => {
                       required={paymentMethod === 'card'}
                     />
                   </div>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="installments">Parcelas *</label>
+                  <select
+                    id="installments"
+                    name="installments"
+                    className="installments-select"
+                    value={formData.installments}
+                    onChange={handleInputChange}
+                    required={paymentMethod === 'card'}
+                  >
+                    {[...Array(12)].map((_, i) => {
+                      const count = i + 1
+                      const installmentValue = (total / count).toFixed(2)
+                      return (
+                        <option key={count} value={count}>
+                          {count}x de R$ {installmentValue} {count === 1 ? 'à vista' : 'sem juros'}
+                        </option>
+                      )
+                    })}
+                  </select>
                 </div>
               </div>
             ) : (

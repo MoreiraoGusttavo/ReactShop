@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './contexts/AuthContext'
 import { CartProvider } from './contexts/CartContext'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 import { Login } from './pages/Login'
 import { Home } from './pages/Home'
 import { ProductDetail } from './pages/ProductDetail'
@@ -27,6 +28,7 @@ function App() {
               <Route path="/order-confirmation" element={<OrderConfirmation />} />
               <Route path="*" element={<Navigate to="/" />} />
             </Routes>
+            <Footer />
           </div>
         </CartProvider>
       </AuthProvider>

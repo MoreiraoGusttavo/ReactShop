@@ -22,15 +22,18 @@
 ### 3. **Filtro por Categoria**
 - ✅ Botão "Todos" para exibir todos os produtos
 - ✅ Filtros dinâmicos por categoria:
-  - electronics
-  - jewelery
-  - men's clothing
-  - women's clothing
+  - eletrônicos
+  - joias
+  - roupas masculinas
+  - roupas femininas
+  - móveis para casa
 
 ### 4. **Busca de Produtos**
 - ✅ Campo de busca em tempo real
 - ✅ Filtro por título do produto
-
+- ✅ Filtro por A-Z e Z-A
+- ✅ Filtro por ordem crescente e decrescente de valor
+- 
 ### 5. **Detalhes do Produto**
 - ✅ Página com informações completas
 - ✅ Imagem ampliada
@@ -46,6 +49,8 @@
 - ✅ Cálculo automático de totais
 - ✅ Badge com quantidade no header
 - ✅ Resumo com subtotal, frete e desconto
+- ✅ Tamanho da roupa
+- ✅ Número do anel
 
 ### 7. **Checkout e Pagamento**
 - ✅ Formulário com todos os dados de entrega
@@ -53,6 +58,7 @@
 - ✅ Validação de campos obrigatórios
 - ✅ Resumo do pedido antes de finalizar
 - ✅ Simulação de processamento
+- ✅ Parcelas de 1x até 12x
 
 ### 8. **Confirmação de Pedido**
 - ✅ Página de confirmação com:
@@ -174,4 +180,4 @@ Qualquer e-mail e senha com +6 caracteres funcionam!
 3. **Sem backend real:** O checkout é simulado (não processa pagamentos reais)
 4. **Responsivo:** Funciona perfeitamente em mobile, tablet e desktop
 
-**Desenvolvido com ❤️ em React + Vite**
+**Desenvolvido em React + Vite**

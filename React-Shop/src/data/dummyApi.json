@@ -1,0 +1,294 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Mochila Fjallraven",
+      "brand": "Fjallraven",
+      "price": 109.95,
+      "description": "Mochila de alta qualidade, perfeita para aventuras ao ar livre e uso diário. Feita com materiais duráveis e design clássico.",
+      "category": "roupas masculinas",
+      "image": "/src/assets/mochila.jpeg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Camisetas Slim Premium Casual Masculinas",
+      "brand": "Premium Basics",
+      "price": 22.3,
+      "description": "Camisetas de algodão macio, com corte slim fit para um visual moderno e elegante. Disponíveis em várias cores e tamanhos.",
+      "category": "roupas masculinas",
+      "image": "/src/assets/camiseta.jpeg",
+      "sizes": ["P", "M", "G", "GG"],
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": 3,
+      "title": "Jaqueta de Algodão Masculina",
+      "brand": "Fashion Wear",
+      "price": 55.99,
+      "description": "Jaqueta de algodão confortável, ideal para o dia a dia e atividades ao ar livre. Perfeita para primavera, outono e inverno.",
+      "category": "roupas masculinas",
+      "image": "/src/assets/jaqueta.jpeg",
+      "sizes": ["P", "M", "G", "GG"],
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": 4,
+      "title": "John Hardy Legends para Mulheres",
+      "brand": "John Hardy",
+      "price": 695,
+      "description": "O anel John Hardy Legends é uma peça icônica da coleção de joias para mulheres. Feito à mão com materiais de alta qualidade, este anel apresenta um design elegante e atemporal, perfeito para ocasiões especiais ou para adicionar um toque de luxo ao seu dia a dia.",
+      "category": "joias",
+      "image": "/src/assets/anel.jpeg",
+      "sizes": ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": 5,
+      "title": "Anel Princesa Banhado em Ouro Branco",
+      "brand": "Luxury Rings",
+      "price": 9.99,
+      "description": "Anel de promessa com diamante solitário, perfeito para ocasiões especiais. Ideal para dar como presente de Natal, aniversário, Dia dos Namorados, etc.",
+      "category": "joias",
+      "image": "/src/assets/anel_princesa.jpeg",
+      "sizes": ["10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+      "rating": {
+        "rate": 3,
+        "count": 70
+      }
+    },
+    {
+      "id": 6,
+      "title": "Monitor Samsung CHG90 Ultra 49 Polegadas",
+      "brand": "Samsung",
+      "price": 999.99,
+      "description": "Monitor curvo ultra-wide de 49 polegadas, ideal para jogos e multitarefa. Com resolução QHD e tecnologia HDR, oferece uma experiência visual imersiva e de alta qualidade.",
+      "category": "eletrônicos",
+      "image": "/src/assets/monitor.jpeg",
+      "rating": {
+        "rate": 2.2,
+        "count": 140
+      }
+    },
+    {
+      "id": 7,
+      "title": "Casaco de Inverno Feminino BIYLACLESEN",
+      "brand": "BIYLACLESEN",
+      "price": 56.99,
+      "description": "Casaco de inverno confortável e elegante, perfeito para o dia a dia e atividades ao ar livre. Disponível em várias cores e tamanhos.",
+      "category": "roupas femininas",
+      "image": "/src/assets/casaco.jpeg",
+      "sizes": ["P", "M", "G", "GG"],
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 8,
+      "title": "Laptop Sony VAIO",
+      "brand": "Sony",
+      "price": 440,
+      "description": "Intel Core 2 Duo CPU T7250 @ 2GHz. RAM 4GB. HDD 160GB. Optical Drive DVD RW",
+      "category": "eletrônicos",
+      "image": "/src/assets/laptop.jpeg",
+      "rating": {
+        "rate": 2.0,
+        "count": 290
+      }
+    },
+    {
+      "id": 9,
+      "title": "Cadeira de Gramado Dobrável",
+      "brand": "Garden Comfort",
+      "price": 23.99,
+      "description": "Cadeira leve, durável e acessível para a praia, jardim e acampamento",
+      "category": "móveis para casa",
+      "image": "/src/assets/cadeira.jpeg",
+      "rating": {
+        "rate": 3.8,
+        "count": 456
+      }
+    },
+    {
+      "id": 10,
+      "title": "Carregador Rápido Ultimate para Celular",
+      "brand": "TechCharge",
+      "price": 15.99,
+      "description": "Carregador rápido com recursos avançados de segurança para todos os modelos de smartphone",
+      "category": "eletrônicos",
+      "image": "/src/assets/carregador.jpeg",
+      "rating": {
+        "rate": 4.3,
+        "count": 789
+      }
+    }
+  ],
+  "categories": [
+    "eletrônicos",
+    "joias",
+    "roupas masculinas",
+    "roupas femininas",
+    "móveis para casa"
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "teste@shop.com",
+      "password": "senha123",
+      "username": "teste",
+      "name": "Usuário Teste"
+    },
+    {
+      "id": 2,
+      "email": "admin@shop.com",
+      "password": "admin123",
+      "username": "admin",
+      "name": "Administrador"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "userId": 1,
+      "date": "2026-06-01",
+      "products": [
+        {
+          "productId": 1,
+          "quantity": 2,
+          "price": 109.95
+        },
+        {
+          "productId": 5,
+          "quantity": 1,
+          "price": 9.99
+        }
+      ],
+      "total": 229.89,
+      "shipping": {
+        "address": "Rua das Flores, 123",
+        "city": "São Paulo",
+        "state": "SP",
+        "zipCode": "01234-567"
+      },
+      "status": "delivered",
+      "deliveryDate": "2026-06-08"
+    },
+    {
+      "id": 1002,
+      "userId": 1,
+      "date": "2026-06-05",
+      "products": [
+        {
+          "productId": 3,
+          "quantity": 1,
+          "price": 55.99
+        }
+      ],
+      "total": 55.99,
+      "shipping": {
+        "address": "Rua das Flores, 123",
+        "city": "São Paulo",
+        "state": "SP",
+        "zipCode": "01234-567"
+      },
+      "status": "processing",
+      "deliveryDate": null
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 1,
+      "userId": 1,
+      "rating": 5,
+      "title": "Excelente qualidade",
+      "comment": "Produto exatamente como descrito. Entrega rápida e bem embalado.",
+      "date": "2026-05-28"
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "userId": 2,
+      "rating": 4,
+      "title": "Muito bom",
+      "comment": "Gostei, mas poderia ter mais cores disponíveis.",
+      "date": "2026-05-25"
+    },
+    {
+      "id": 3,
+      "productId": 3,
+      "userId": 1,
+      "rating": 5,
+      "title": "Perfeito para o inverno",
+      "comment": "Muito confortável e aquecido. Recomendo!",
+      "date": "2026-05-20"
+    }
+  ],
+  "cart": {
+    "id": "cart-1",
+    "userId": 1,
+    "items": [
+      {
+        "id": 1,
+        "title": "Fjallraven - Backpack",
+        "price": 109.95,
+        "quantity": 1,
+        "image": "https://picsum.photos/300/300?random=1",
+        "category": "men's clothing"
+      }
+    ],
+    "total": 109.95
+  },
+  "payments": [
+    {
+      "id": 1,
+      "orderId": 1001,
+      "amount": 229.89,
+      "method": "credit_card",
+      "status": "completed",
+      "date": "2026-06-01"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "SUMMER2026",
+      "description": "Desconto de verão - 15% OFF",
+      "discount": 15,
+      "type": "percentage",
+      "validFrom": "2026-06-01",
+      "validTo": "2026-08-31",
+      "minPurchase": 50
+    },
+    {
+      "id": "WELCOME10",
+      "description": "10% desconto para novos clientes",
+      "discount": 10,
+      "type": "percentage",
+      "validFrom": "2026-01-01",
+      "validTo": "2026-12-31",
+      "minPurchase": 0
+    },
+    {
+      "id": "FRETE5",
+      "description": "R$ 5 desconto no frete",
+      "discount": 5,
+      "type": "fixed",
+      "validFrom": "2026-06-01",
+      "validTo": "2026-06-30",
+      "minPurchase": 100
+    }
+  ]
+}
